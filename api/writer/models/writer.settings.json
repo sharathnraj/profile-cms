@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "writers",
+  "info": {
+    "name": "Writer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}
